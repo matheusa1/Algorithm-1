@@ -358,14 +358,20 @@ void printBoxFilled() {
 
 //imprime a caixa malhada.
 void printBox01() {
-    int height, width;
+    int height, width, position;
+    position = 1;
     printf("Digite a altura e a largura: ");
     scanf("%d %d", &height, &width);
 
     for(int i = 0; i < height; i++) {
         for(int j = 0; j < width; j++) {
-            printf("0");
+            if(position % 2 == 0){
+                printf("1");
+            }
+            else printf("0");
+            position++;
         }
+        position = 1;
         printf("\n");
     }
 }
