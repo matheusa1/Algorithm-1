@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void prime();
+void prime(int n);
 void printRand();
 void printRand2();
 void summation();
@@ -17,8 +17,9 @@ void printBox01();
 void printBoxProgressive();
 
 int main(){
-    int exec, cont;
+    int exec, cont, n, boole;
     cont = 1;
+    boole = 1;
     while (cont != 0){
         printf("\n+------------------------------------+\n");
         printf("|       Qual exercicio deseja?       |\n");
@@ -28,7 +29,12 @@ int main(){
         scanf("%d", &exec);
 
         if(exec == 0) cont = 0;
-        if(exec == 1) prime();
+        if(exec == 1) {
+            while(boole != 0){
+                
+            }
+            prime(n);
+        }
         if(exec == 2) printRand();
         if(exec == 3) printRand2();
         if(exec == 4) summation();
@@ -48,7 +54,7 @@ int main(){
 }
 
 // Verifica se o numero é primo.
-void prime() {
+void prime(int n) {
     int n, cont1, boole;
     boole = 1; cont1 = 1;
     while(cont1 != 0) {
