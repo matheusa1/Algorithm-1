@@ -14,6 +14,7 @@ void printLine();
 void printBoxCustom();
 void printBoxFilled();
 void printBox01();
+void printBoxProgressive();
 
 int main(){
     int exec, cont;
@@ -41,6 +42,7 @@ int main(){
         if(exec == 12) printBoxCustom();
         if(exec == 13) printBoxFilled();
         if(exec == 14) printBox01();
+        if(exec == 15) printBoxProgressive();
     }
     return 0;
 }
@@ -374,4 +376,10 @@ void printBox01() {
         position = 1;
         printf("\n");
     }
+}
+
+//Caixa progressiva.
+void printBoxProgressive() {
+    int height, width, max, cont;
+    
 }
