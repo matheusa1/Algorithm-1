@@ -10,7 +10,8 @@ void factoriaSum(int x);
 int isPerfectNumber(int x);
 void numbersInFull10(int x);
 void numbersInFull100(int x);
-///////////////////////////////////// exec 10
+void intToRomanAux(int x, int y);
+void intToRoman(int x);///////////////////////////////////////////////////// exec 10
 void printLine(int x, char fill, char edge);
 void printCustomBox(int height, int width, char fill, char edge);
 void printBoxFilled(int height, int width, char fill);
@@ -127,12 +128,17 @@ int main() {
                 }
             }
         }
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
+        if(exec == 10) {
+            while(boole != 0) {
+                printf("\nDigite um numero de 1 a 100: ");
+                scanf("%d", &a);
+                if(a == 0) boole = 0;
+                else {
+                    printf("\n");
+                    intToRoman(a);
+                }
+            }
+        }
         if(exec == 11) {
             while(boole != 0) {
                 printf("Digite a quantidade de linhas, o caracatere de preenchimento e o caracatere de borda: ");
@@ -394,12 +400,66 @@ void numbersInFull100(int x) {
     if(x == 100) printf("Cem\n\n");
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
+//Auxilia a função intToRoman
+void intToRomanAux(int x, int y) {
+    x = x - y;
+    if(x == 1) printf("I\n");
+    if(x == 2) printf("II\n");
+    if(x == 3) printf("III\n");
+    if(x == 4) printf("IV\n");
+    if(x == 5) printf("V\n");
+    if(x == 6) printf("VI\n");
+    if(x == 7) printf("VII\n");
+    if(x == 8) printf("VIII\n");
+    if(x == 9) printf("IX\n");
+    if(x == 10) printf("X\n");
+}
+//Imprime os números romanos de 1 a 100.
+void intToRoman(int x) {
+    if(x < 0) printf("Erro!, valor menor do que zero.\n");
+    else {
+        if(x > 0 && x < 10) {
+            intToRomanAux(x, 0);
+        }
+        if(x >= 10 && x <= 20) {
+            printf("X");
+            intToRomanAux(x, 10);
+        }
+        if(x > 20 && x <= 30) {
+            printf("XX");
+            intToRomanAux(x, 20);
+        }
+        if(x > 30 && x < 40) {
+            printf("XXX");
+            intToRomanAux(x, 30);
+        }
+        if(x >= 40 && x < 50) {
+            printf("XL");
+            intToRomanAux(x, 40);
+        }
+        if(x >= 50 && x < 60) {
+            printf("L");
+            intToRomanAux(x, 50);
+        }
+        if(x >= 60 && x < 70) {
+            printf("LX");
+            intToRomanAux(x, 60);
+        }
+        if(x >= 70 && x < 80) {
+            printf("LXX");
+            intToRomanAux(x, 70);
+        }
+        if(x >= 80 && x < 90) {
+            printf("LXXX");
+            intToRomanAux(x, 80);
+        }
+        if(x >= 90 && x < 100) {
+            printf("XC");
+            intToRomanAux(x, 90);
+        }
+        if(x == 100) printf("C\n");
+    }
+}
 
 //Imprime uma linha personalizada;
 void printLine(int x, char fill, char edge) {
