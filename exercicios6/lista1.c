@@ -6,12 +6,12 @@ void printRandom(int x, int y);
 void printRandom2(int x, int y);
 void summation(int x);
 void factoriaSum(int x);
-///////////////////////////// exec 6
+int factorialSum2(int x);
 int isPerfectNumber(int x);
 void numbersInFull10(int x);
 void numbersInFull100(int x);
 void intToRomanAux(int x, int y);
-void intToRoman(int x);///////////////////////////////////////////////////// exec 10
+void intToRoman(int x);
 void printLine(int x, char fill, char edge);
 void printCustomBox(int height, int width, char fill, char edge);
 void printBoxFilled(int height, int width, char fill);
@@ -40,6 +40,7 @@ int main() {
 
         if(exec == 0) cont = 0;
         if(exec == 1) {
+            printf("\n--#  DIZ SE O NUMERO EH PRIMO OU NAO.  #--\n");
             while(boole != 0) {
                 printf("\nDigite um numero inteiro positivo: ");
                 scanf("%d", &a);
@@ -51,6 +52,7 @@ int main() {
             }
         }
         if(exec == 2) {
+            printf("\n--#  IMPRIME UMA QUANTIDADE LIMITADA DE NUMEROS ALEATORIOS.  #--\n");
             while(boole != 0) {
                 printf("Digite a quantidade de numeros desejados e o limete: ");
                 scanf("%d %d", &a, &b);
@@ -59,6 +61,7 @@ int main() {
             }
         }
         if(exec == 3) {
+            printf("\n--#  IMPRIME UMA QUANTIDADE LIMITADA DE NUMEROS ALEATORIOS, POSITIVOS E NEGATIVOS.  #--\n");
             while(boole != 0) {
                 printf("Digite a quantidade de numeros desejados e o limete: ");
                 scanf("%d %d", &a, &b);
@@ -67,6 +70,7 @@ int main() {
             }
         }
         if(exec == 4) {
+            printf("\n--#  IMPRIME A SOMATORIA DE UM NUMERO  #--\n");
             while(boole != 0) {
                 printf("digite um numero positivo inteiro: ");
                 scanf("%d", &a);
@@ -75,6 +79,7 @@ int main() {
             }
         }
         if(exec == 5) {
+            printf("\n--#  IMPRIME O FATORIAL DE UM NUMERO COM DOIS LACOS  #--\n");
             while(boole != 0) {
                 printf("digite um numero positivo inteiro: ");
                 scanf("%d", &a);
@@ -82,13 +87,21 @@ int main() {
                 else factoriaSum(a);
             }
         }
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////
+        if(exec == 6) {
+            printf("\n--#  IMPRIME O FATORIAL DE UM NUMERO COM UM LACOS  #--\n");
+            while(boole != 0) {
+                printf("Digite um numero positivo inteiro: ");
+                scanf("%d", &a);
+                if(a == 0) boole = 0;
+                else {
+                    printf("\n");
+                    int res = factorialSum2(a);
+                    printf("%d\n\n", res);
+                }
+            }
+        }
         if(exec == 7) {
+            printf("\n--#  IMPRIME SE UM NUMERO E PERFEITO   #--\n");
             while(boole != 0) {
                 printf("Digite um numero inteiro positivo: ");
                 scanf("%d", &a);
@@ -101,6 +114,7 @@ int main() {
             }
         }
         if(exec == 8) {
+            printf("\n--#  IMPRIME OS NUMEROS POR EXTENSO DE -10 A 10  #--\n");
             while(boole != 0) {
                 printf("Digite um numero de -10 a 10: ");
                 scanf("%d", &a);
@@ -115,6 +129,7 @@ int main() {
             }
         }
         if(exec == 9) {
+            printf("\n--#  IMPRIME OS NUMEROS POR EXTENSO DE -100 A 100  #--\n");
             while(boole != 0) {
                 printf("Digite um numero de -100 a 100: ");
                 scanf("%d", &a);
@@ -129,6 +144,7 @@ int main() {
             }
         }
         if(exec == 10) {
+            printf("\n--#  IMPRIME OS NUMEROS ROMANOS  #--\n");
             while(boole != 0) {
                 printf("\nDigite um numero de 1 a 100: ");
                 scanf("%d", &a);
@@ -140,8 +156,9 @@ int main() {
             }
         }
         if(exec == 11) {
+            printf("\n--#  IMPRIME UMA LINHA PERSONALIZADA  #--\n");
             while(boole != 0) {
-                printf("Digite a quantidade de linhas, o caracatere de preenchimento e o caracatere de borda: ");
+                printf("Digite a largura da linhas, o caracatere de preenchimento e o caracatere de borda: ");
                 scanf("%d %c %c", &a, &fill, &edge);
                 if(a == 0 && fill == '0' && edge == '0') boole = 0;
                 else {
@@ -151,6 +168,7 @@ int main() {
             }
         }
         if(exec == 12) {
+            printf("\n--#  IMPRIME UMA CAIXA PERSONALIZADA  #--\n");
             while(boole != 0) {
                 printf("Digite a altura, a largura, o caracatere de preenchimento e o caractere da borda: ");
                 scanf("%d %d %c %c", &a, &b, &fill, &edge);
@@ -162,6 +180,7 @@ int main() {
             }
         }
         if(exec == 13) {
+            printf("\n--#  IMPRIME UMA CAIXA COM APENAS UM LACO  #--\n");
             while(boole != 0) {
                 printf("Digite a altura, a largura e o caractere de preenchimento: ");
                 scanf("%d %d %c", &a, &b, &fill);
@@ -173,12 +192,13 @@ int main() {
             }
         }
         if(exec == 14) {
+            printf("\n--#  IMPRIME UMA CAIXA MALHADA  #--\n");
             while(boole != 0) {
                 printf("Digite a altura e a largura: ");
                 scanf("%d %d", &a, &b);
                 if(a == 0 && b == 0) boole = 0;
                 else {
-                    printf("Digite qual função deseja\nCom um laco - 1\nCom dois lacos - 2\n> ");
+                    printf("Digite qual funcao deseja\nCom um laco - 1\nCom dois lacos - 2\n> ");
                     scanf("%d", &c);
                     if(c == 1) {
                         printf("\n");
@@ -192,6 +212,7 @@ int main() {
             }
         }
         if(exec == 15) {
+            printf("\n--#  IMPRIME UMA CAIXA COM NUMEROS CONTINUOS  #--\n");
             while(boole != 0) {
                 printf("Digite o limite, a altura e a largura: ");
                 scanf("%d %d %d",&a, &b, &c);
@@ -203,9 +224,10 @@ int main() {
             }
         }
         if(exec == 16) {
+            printf("\n--#  IMPRIME QUAL O MAIOR E O MENOR DOS NUMEROS DIGITADOS  #--\n");
             a = INT_MAX;
             b = INT_MIN;
-            printf("Digite numeros consecutivos(0 para sair): ");
+            printf("Digite numeros consecutivos(0 para sair): \n");
             while(boole != 0) {    
                 scanf("%d", &c);
                 if(c == 0) boole = 0;
@@ -217,6 +239,7 @@ int main() {
             printf("Menor numero: %d\n\n", a);
         }
         if(exec == 17) {
+            printf("\n--#  IMPRIME A SOMA DOS PARES E A QUANTIDADE DE NUMEROS PRIMOS  #--\n");
             int sum, primes;
             while(boole != 0) {
                 printf("Digite a quantidade de numeros desejados: ");
@@ -295,13 +318,19 @@ void factoriaSum(int x) {
     }
     printf("\b\b= %d\n",sum);
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
+//Imprime a soma dos fatorias com um laço.
+int factorialSum2(int x) {
+    int sum = 0;
+    int fact = 1;
+    for(int i = 1; i <= x; i++) {
+        printf("%d! + ", i);
+        fact = fact * i;
+        sum = sum + fact;
+    }
+    printf("\b\b= ");
+    return sum;
+}
 //Imprime se o número é perfeito.
 int isPerfectNumber(int x) {
     int sum = 0;
@@ -418,46 +447,49 @@ void intToRomanAux(int x, int y) {
 void intToRoman(int x) {
     if(x < 0) printf("Erro!, valor menor do que zero.\n");
     else {
-        if(x > 0 && x < 10) {
-            intToRomanAux(x, 0);
+        if(x > 100) printf("Erro!, valor maior do que cem.\n");
+        else {
+            if(x > 0 && x < 10) {
+                intToRomanAux(x, 0);
+            }
+            if(x >= 10 && x <= 20) {
+                printf("X");
+                intToRomanAux(x, 10);
+            }
+            if(x > 20 && x <= 30) {
+                printf("XX");
+                intToRomanAux(x, 20);
+            }
+            if(x > 30 && x < 40) {
+                printf("XXX");
+                intToRomanAux(x, 30);
+            }
+            if(x >= 40 && x < 50) {
+                printf("XL");
+                intToRomanAux(x, 40);
+            }
+            if(x >= 50 && x < 60) {
+                printf("L");
+                intToRomanAux(x, 50);
+            }
+            if(x >= 60 && x < 70) {
+                printf("LX");
+                intToRomanAux(x, 60);
+            }
+            if(x >= 70 && x < 80) {
+                printf("LXX");
+                intToRomanAux(x, 70);
+            }
+            if(x >= 80 && x < 90) {
+                printf("LXXX");
+                intToRomanAux(x, 80);
+            }
+            if(x >= 90 && x < 100) {
+                printf("XC");
+                intToRomanAux(x, 90);
+            }
+            if(x == 100) printf("C\n");
         }
-        if(x >= 10 && x <= 20) {
-            printf("X");
-            intToRomanAux(x, 10);
-        }
-        if(x > 20 && x <= 30) {
-            printf("XX");
-            intToRomanAux(x, 20);
-        }
-        if(x > 30 && x < 40) {
-            printf("XXX");
-            intToRomanAux(x, 30);
-        }
-        if(x >= 40 && x < 50) {
-            printf("XL");
-            intToRomanAux(x, 40);
-        }
-        if(x >= 50 && x < 60) {
-            printf("L");
-            intToRomanAux(x, 50);
-        }
-        if(x >= 60 && x < 70) {
-            printf("LX");
-            intToRomanAux(x, 60);
-        }
-        if(x >= 70 && x < 80) {
-            printf("LXX");
-            intToRomanAux(x, 70);
-        }
-        if(x >= 80 && x < 90) {
-            printf("LXXX");
-            intToRomanAux(x, 80);
-        }
-        if(x >= 90 && x < 100) {
-            printf("XC");
-            intToRomanAux(x, 90);
-        }
-        if(x == 100) printf("C\n");
     }
 }
 
