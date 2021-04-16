@@ -24,6 +24,7 @@
                 }
             ],
             "preLaunchTask": "C/C++: gcc.exe arquivo de build ativo"
+            
         }
     ]
 }
