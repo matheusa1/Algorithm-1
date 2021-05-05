@@ -6,7 +6,6 @@ void mapImpress(int position[2], int chestPos[2], int chestVerify);
 void playerCommand(char command[], int position[2], int *chestVerify);
 
 int main() {
-    int cont = 0;
     char command[10];
     int boole = 1;
     int posInit[] = {9, 4};
